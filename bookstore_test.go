@@ -78,10 +78,10 @@ func TestShowAllBooks(t *testing.T) {
 
 func TestGetBook(t *testing.T) {
 	t.Parallel()
-	books := []bookstore.Book {
-		{Id: 1, Title: "For the love of go"},
-		{Id: 2, Title: "Go powered"},
-		{Id: 3, Title: "The way to go"},
+	books := map[int]bookstore.Book {
+		1: {Id: 1, Title: "For the love of go"},
+		2: {Id: 2, Title: "Go powered"},
+		3: {Id: 3, Title: "The way to go"},
 	}
 
 	var want bookstore.Book = bookstore.Book{Id: 3, Title: "The way to go"}
